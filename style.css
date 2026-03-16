@@ -1,0 +1,61 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#home img{
+    height: 50vh;
+}
+
+.section{
+    height: 100vh;
+    scroll-margin: 120px;
+}
+
+.site-header {
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.site-nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    
+}
+
+.card img{
+    height: 25vh;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    padding: 18px 0;
+}
+
+.galimgs img{
+    height: 40vh;
+}
+
+.galimgs{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer{
+    color: gray;
+}
+
+
+
+
