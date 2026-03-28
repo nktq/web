@@ -7,8 +7,9 @@ html {
 }
 
 .section{
-    height: 100vh;
+    min-height: 100vh;
     scroll-margin: 120px;
+    padding: 40px 0;
 }
 
 .site-header {
@@ -33,24 +34,105 @@ html {
     
 }
 
+.home{
+    display: flex;
+    justify-content: space-between;
+}
+
 .card img{
-    height: 25vh;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
 .cards{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
     padding: 18px 0;
 }
 
-.galimgs img{
-    height: 40vh;
+.card{
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.card h3,
+.card p{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.card h3{
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.card p{
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.cul{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.imgsc{
+    display: flex;
+    gap: 10px;
+}
+
+.imgsc img{
+    width: 33.333%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
 }
 
 .galimgs{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+    gap: 15px;
 }
+
+.galimgs img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+#pic1,
+#pic4,
+#pic11{
+    grid-column: span 1;
+    grid-row: span 2;
+    height: 520px;
+}
+
+
+#pic9, 
+#pic12{
+   
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 520px;
+}
+
+#pic7,
+#pic14{
+    grid-column: span 2;
+    grid-row: span 1;
+    height: 250px;
+}
+
+
 
 footer{
     color: gray;
