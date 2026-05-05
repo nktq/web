@@ -1,25 +1,41 @@
-let message = "Добро пожаловать в Киото!";
-let button = document.getElementById("mainBtn");
 
-function showMessage(){
-    console.log(message);
+const caruselContainer = document.querySelector("#carusel");
+const images = Array.from(caruselContainer.children);
+
+const forwardButton = document.querySelector("#forward");
+const backButton = document.querySelector("#back");
+
+let currentIndex = 0;
+
+const showImage = (index) => {
+    images[currentIndex].classList.remove("current");
+    currentIndex = index;
+    images[currentIndex].classList.add("current");
 }
 
-showMessage();
+const forward = () => {
+    let nextIndex = currentIndex + 1;
 
-button.addEventListener("click", function () {
-    console.log("Кнопка нажата!");
-});
+    if (nextIndex >= images.length){
+        nextIndex = 0;
+    }
 
-setTimeout(function() {
-    console.log("Прошло 3 секунды");
-}, 3000);
+    showImage(nextIndex);
 
-function changeText() {
-    button.textContent = "Смотрим достопримечательности";
 }
 
-setTimeout(changeText, 5000);
+const back = () => {
+    let prevIndex = currentIndex - 1;
+
+    if (prevIndex < 0){
+        prevIndex = images.length - 1;
+    }
+
+    showImage(prevIndex)
+}
+
+forwardButton.addEventListener("click", forward);
+backButton.addEventListener("click", back);
 
 
 

@@ -169,7 +169,6 @@ html {
     .hero-content p {
         font-size: 16px;
     }
-
  
 
 }
@@ -283,11 +282,50 @@ p {
     
 }
 
+#carusel {
+    position: relative;
+    width: 450px;
+    height: 300px;
+}
 
-footer{
+.carusel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.current { 
+    
+    opacity: 1; 
+}
+
+.caruselwbtns { 
+    display: flex; 
+    justify-content: space-around; 
+}
+
+footer {
     color: gray;
 }
 
+#back, #forward {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 
+@media (max-width: 768px) {
+    .carusel-image {
+        
+        width: 300px;
+        height: 200px;
+    }
+}
 
