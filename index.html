@@ -273,6 +273,59 @@
                 <p>Email: kyoto@japan.com</p>
                 <p>Телефон: +81 007 344 1337</p>
                 <p>Адрес: Kyoto, Japan</p>
+                <div>Также можете оставить заявку на консультацию</div>
+                <form class="form" id="form">
+
+                    <h2 class="form__title">Заявка</h2>
+
+                    <label class="form__label" for="name">Имя</label>
+
+                    <input 
+                        class="form__input" 
+                        id="name" 
+                        name="name"
+                        type="text" 
+                        placeholder="Введите имя"
+                    >
+
+                    <p class="error-message hidden" id="name-error">
+                        Имя должно содержать минимум 4 символа
+                    </p>
+
+
+                    <label class="form__label" for="email">Email</label>
+
+                    <input 
+                        class="form__input" 
+                        id="email"
+                        name="email"
+                        type="email" 
+                        placeholder="example@mail.com"
+                    >
+
+                    <p class="error-message hidden" id="email-error">
+                        Введите корректный email
+                    </p>
+
+
+                    <label class="form__label" for="message">Сообщение</label>
+
+                    <textarea 
+                        class="form__textarea" 
+                        id="message"
+                        name="message"
+                        placeholder="Ваше сообщение"
+                    ></textarea>
+
+                    <p class="error-message hidden" id="message-error">
+                        Сообщение слишком короткое
+                    </p>
+
+                    <button class="form__button" type="submit">
+                        Отправить
+                    </button>
+
+                </form>
             </div>
         </section>
         
